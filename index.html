@@ -8,43 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/styles/fonts.css"/>
 	<link rel="stylesheet/less" type="text/css" href="assets/less/styles.less"/>
 	<script src="assets/js/less.js" type="text/javascript" defer></script>
-	<script src="assets/js/jquery-3.1.1.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			var menu = $('.menu');
-			var logo = $('#logo');
-
-			var header = $('header');
-
-			var hamburger = header.find('.hamburger');
-
-
-			hamburger.on('click', function() {
-				$(this).toggleClass('hamburger--stand is-active');
-				menu.toggleClass('active');
-				$('html').toggleClass('hidden-scroll');
-				logo.toggleClass('logo-fixed');
-			});
-
-			
-
-			$('header nav .menu a').on('click', function(e){
-				e.preventDefault();
-				var element = $(this).attr('href');
-				var offsetTop = $(element).offset().top;
-				offsetTop = Math.round( offsetTop );
-
-				$('html, body').animate({
-					scrollTop: offsetTop - 50
-				}, 300);
-
-				menu.removeClass('active');
-				$('html').removeClass('hidden-scroll');
-				logo.removeClass('logo-fixed');
-				hamburger.removeClass('hamburger--stand is-active');
-			});
-		});
-	</script>
 </head>
 
 <body>
@@ -358,7 +321,7 @@
 		<!--section "Footer" -->
 		<footer id="footer">
 			<div class="content_wrapper">
-				<span>&copy; Modified by VK 2016</span>
+				<span>&copy; Created & modified by VK 2016</span>
 				<div class="logo-row">
 					<a href="#">
 						<svg class="twitter" width="40" height="40">
@@ -390,8 +353,10 @@
 		<!--end of section "Footer"" -->
 	
 	</div>
-    <!--end of Sticky footer mark-up-->
-
+	<!--end of Sticky footer mark-up-->
+	
+	<script src="assets/js/jquery-3.1.1.min.js"></script>
+	<script src="assets/js/script.js"></script>
 </body>
 
 </html>
